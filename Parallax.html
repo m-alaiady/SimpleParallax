@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        div{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            position: absolute;
+            font-size: 10em;
+            color: white;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        div:nth-child(1){
+            background-image: url('./image1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 75em;
+            width: 100%;
+        }
+        div:nth-child(2){
+            background-image: url('./image2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 75em;
+            width: 100%;
+        }
+        div:nth-child(3){
+            background-image: url('./image3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 75em;
+            width: 100%;
+        }
+        div:nth-child(4){
+            background-image: url('./image4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 75em;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="parallex">
+        <h2>Hello World</h2>
+    </div>
+    <div class="">
+        <h2>Hello World</h2>
+    </div>
+    <div class="">
+        <h2>Hello World</h2>
+    </div>
+    <div class="">
+        <h2>Hello World</h2>
+    </div>
+</body>
+<script>
+    const parallex = document.getElementById('parallex');
+
+    window.addEventListener('scroll', () => {
+        let offset = window.pageYOffset;
+        parallex.style.backgroundPositionY = offset * 0.7 + "px";
+    })
+
+</script>
+</html>
